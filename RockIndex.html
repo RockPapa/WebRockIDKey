@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rock Index</title>
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: rgba(0, 128, 255, 0.15);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: #004080;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #searchBox {
+    width: 90%;
+    margin: 1rem auto;
+    display: block;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 2px solid #004080;
+    border-radius: 8px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003366;
+    display: block;
+  }
+
+  li a:hover {
+    color: #ff3333;
+  }
+</style>
+</head>
+<body>
+  <header>Rock Index</header>
+
+  <input type="text" id="searchBox" placeholder="Search rocks..." onkeyup="filterList()">
+
+  <ul id="rockList">
+    <li><a href="images/Amphibolite.html">Amphibolite</a></li>
+    <li><a href="images/Andesite.html">Andesite</a></li>
+    <li><a href="images/Asbestos.html">Asbestos</a></li>
+    <li><a href="images/Basalt.html">Basalt</a></li>
+    <li><a href="images/BiotiteGneiss.html">Biotite Gneiss</a></li>
+    <li><a href="images/Breccia.html">Breccia</a></li>
+    <li><a href="images/Chert.html">Chert</a></li>
+    <li><a href="images/ChloriteSchist.html">Chlorite Schist</a></li>
+    <li><a href="images/Coal.html">Coal</a></li>
+    <li><a href="images/Conglomerate.html">Conglomerate</a></li>
+    <li><a href="images/Coquina.html">Coquina</a></li>
+    <li><a href="images/Dacite.html">Dacite</a></li>
+    <li><a href="images/Diabase.html">Diabase</a></li>
+    <li><a href="images/Diorite.html">Diorite</a></li>
+    <li><a href="images/Dolomite.html">Dolomite</a></li>
+    <li><a href="images/Dunite.html">Dunite</a></li>
+    <li><a href="images/EpidoteGranofels.html">Epidote Granofels</a></li>
+    <li><a href="images/FelsicMetatuff.html">Felsic Metatuff</a></li>
+    <li><a href="images/FelsicTuff.html">Felsic Tuff</a></li>
+    <li><a href="images/Gabbro.html">Gabbro</a></li>
+    <li><a href="images/Granite.html">Granite</a></li>
+    <li><a href="images/GraniteGneiss.html">Granite Gneiss</a></li>
+    <li><a href="images/Graywacke.html">Graywacke</a></li>
+    <li><a href="images/Greenstone.html">Greenstone</a></li>
+    <li><a href="images/HematiteQuartzite.html">Hematite Quartzite</a></li>
+    <li><a href="images/Kaolinite.html">Kaolinite</a></li>
+    <li><a href="images/Lahar.html">Lahar</a></li>
+    <li><a href="images/Limestone.html">Limestone</a></li>
+    <li><a href="images/Magnetite.html">Magnetite</a></li>
+    <li><a href="images/Marble.html">Marble</a></li>
+    <li><a href="images/Meatgraywacke.html">Meatgraywacke</a></li>
+    <li><a href="images/Metabasalt.html">Metabasalt</a></li>
+    <li><a href="images/Migmatite.html">Migmatite</a></li>
+    <li><a href="images/Obsidian.html">Obsidian</a></li>
+    <li><a href="images/Peridotite.html">Peridotite</a></li>
+    <li><a href="images/Phyllite.html">Phyllite</a></li>
+    <li><a href="images/Quartz.html">Quartz</a></li>
+    <li><a href="images/Quartzite.html">Quartzite</a></li>
+    <li><a href="images/Rhyolite.html">Rhyolite</a></li>
+    <li><a href="images/Sandstone.html">Sandstone</a></li>
+    <li><a href="images/Schist.html">Schist</a></li>
+    <li><a href="images/Serpentinite.html">Serpentinite</a></li>
+    <li><a href="images/Shale.html">Shale</a></li>
+    <li><a href="images/Siltstone.html">Siltstone</a></li>
+    <li><a href="images/Slate.html">Slate</a></li>
+    <li><a href="images/Soapstone.html">Soapstone</a></li>
+    <li><a href="images/TurbiditeSandstone.html">Turbidite Sandstone</a></li>
+    <li><a href="images/Unakite.html">Unakite</a></li>
+  </ul>
+
+<script>
+function filterList() {
+  const input = document.getElementById("searchBox");
+  const filter = input.value.toLowerCase();
+  const ul = document.getElementById("rockList");
+  const li = ul.getElementsByTagName("li");
+
+  for (let i = 0; i < li.length; i++) {
+    const a = li[i].getElementsByTagName("a")[0];
+    if (a.textContent.toLowerCase().includes(filter)) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
