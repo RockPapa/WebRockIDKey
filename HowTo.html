@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How To Identify a Rock</title>
+<style>
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: rgba(0,0,0,0.05);
+    overflow-y: scroll;
+  }
+
+  .container {
+    position: relative;
+    padding: 40px 30px; /* top/bottom 40px, sides 30px */
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Transparent top-right button */
+  .top-right-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 440px;
+    height: 165px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .top-right-btn:hover {
+    background: rgba(0, 128, 255, 0.2);
+  }
+
+  .top-right-btn:active {
+    background: rgba(255, 0, 0, 0.3);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Scrollable content -->
+    <img src="images/how_to_id_a_rock.jpg" alt="How to Identify a Rock">
+
+    <!-- Transparent clickable area -->
+    <button class="top-right-btn" onclick="alert('Top-right button clicked! (Link later)')"></button>
+  </div>
+</body>
+</html>
