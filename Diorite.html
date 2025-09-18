@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diorite</title>
+<style>
+  body {
+    margin: 0;
+    background: rgba(0,0,0,0.05);
+    font-family: system-ui, sans-serif;
+    overflow-y: scroll;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 844px; /* keeps scale similar to iPhone ratio */
+    margin: auto;
+    padding: 10px;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Transparent clickable top-right button */
+  .top-right-btn {
+    position: absolute;
+    top: 9%;       /* y: imageHeight * 0.09 */
+    right: 49%;    /* x: imageWidth * 0.51 */
+    width: 50%;    /* width = imageWidth * 1.0 */
+    height: 17%;   /* height = imageHeight * 0.17 */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .top-right-btn:hover {
+    background: rgba(0, 128, 255, 0.25);
+  }
+
+  .top-right-btn:active {
+    background: rgba(255, 0, 0, 0.35);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Scrollable Diorite Image -->
+    <img src="images/diorite.jpg" alt="Diorite">
+
+    <!-- Transparent top-right button -->
+    <button class="top-right-btn" onclick="location.href='DioriteDes.html'"></button>
+  </div>
+</body>
+</html>
