@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Igneous Choices</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #000;
+    display: grid;
+    place-items: center;
+    font-family: system-ui, sans-serif;
+  }
+
+  .stage {
+    position: relative;
+    max-width: min(95vw, 95vh * (390/844));
+    width: 100%;
+  }
+
+  .stage img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .btn {
+    position: absolute;
+    left: calc(var(--x) * 1%);
+    top:  calc(var(--y) * 1%);
+    width: calc(var(--w) * 1%);
+    height: calc(var(--h) * 1%);
+    transform: translate(-50%, -50%);
+    background: transparent; /* invisible until hover */
+    cursor: pointer;
+  }
+
+  /* Hover = semi-transparent blue */
+  .btn:hover {
+    background: rgba(0, 128, 255, 0.35);
+  }
+
+  /* Active/click = semi-transparent red */
+  .btn:active {
+    background: rgba(255, 0, 0, 0.35);
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <img src="images/igneous_choices.jpg" alt="Igneous rock choices" />
+
+    <a href="images/Granite.html"    class="btn" style="--x:25; --y:21; --w:42; --h:19;"></a>
+    <a href="images/Dacite.html"     class="btn" style="--x:72.5; --y:22; --w:42; --h:19;"></a>
+    <a href="images/Diorite.html"    class="btn" style="--x:25; --y:41; --w:42; --h:18.5;"></a>
+    <a href="images/Andesite.html"   class="btn" style="--x:75; --y:41.5; --w:42; --h:19.5;"></a>
+    <a href="images/Diabase.html"    class="btn" style="--x:25; --y:62; --w:42; --h:22;"></a>
+    <a href="images/Basalt.html"     class="btn" style="--x:70; --y:62; --w:45.5; --h:22;"></a>
+    <a href="images/Gabbro.html"     class="btn" style="--x:25; --y:85; --w:42; --h:22;"></a>
+    <a href="images/Peridotite.html" class="btn" style="--x:70; --y:85; --w:48; --h:22;"></a>
+  </div>
+</body>
+</html>

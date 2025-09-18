@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Granite Gneiss</title>
+<style>
+  body {
+    margin: 0;
+    background: black;
+    text-align: center;
+  }
+
+  .background-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 20%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .back {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .container {
+    position: relative;
+  }
+</style>
+</head>
+<body>
+  <button class="back" onclick="navigate('metamorphicchoices.html')">‹ Back</button>
+
+  <div class="container">
+    <!-- Image is in SAME folder as this HTML file -->
+    <img src="granite_gneiss.jpg" alt="Granite Gneiss" class="background-img">
+
+    <!-- Transparent clickable area -->
+    <button class="nav-btn" onclick="navigate('granitegneissdes.html')"></button>
+  </div>
+
+<script>
+  function navigate(page) {
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>

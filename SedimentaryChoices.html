@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sedimentary Choices</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* scaledToFit */
+    display: block;
+  }
+  .nav-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+  .nav-btn:active {
+    transform: scale(0.92);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <img src="images/sedimentary_choices.jpg" alt="Sedimentary Choices" class="background-img">
+
+    <!-- Row 1 -->
+    <button class="nav-btn" style="left:27%; top:26%; width:44%; height:15%;" onclick="navigate('sandstone.html')"></button>
+    <button class="nav-btn" style="left:73%; top:26%; width:44%; height:15%;" onclick="navigate('conglomerate.html')"></button>
+
+    <!-- Row 2 -->
+    <button class="nav-btn" style="left:27%; top:45%; width:44%; height:15%;" onclick="navigate('turbiditesandstone.html')"></button>
+    <button class="nav-btn" style="left:73%; top:45%; width:44%; height:15%;" onclick="navigate('graywacke.html')"></button>
+
+    <!-- Row 3 -->
+    <button class="nav-btn" style="left:27%; top:64%; width:44%; height:15%;" onclick="navigate('breccia.html')"></button>
+    <button class="nav-btn" style="left:73%; top:64%; width:44%; height:15%;" onclick="navigate('lahar.html')"></button>
+
+    <!-- Row 4 -->
+    <button class="nav-btn" style="left:27%; top:83%; width:44%; height:15%;" onclick="navigate('bandediron.html')"></button>
+    <button class="nav-btn" style="left:73%; top:83%; width:44%; height:15%;" onclick="navigate('coquina.html')"></button>
+  </div>
+
+<script>
+  function navigate(page) {
+    // Optional: click sound
+    // const click = new Audio("sounds/click.mp3"); click.play();
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>
