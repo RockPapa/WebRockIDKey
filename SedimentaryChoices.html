@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sedimentary Choices</title>
+<title>Sedimentary Choices (Debug)</title>
 <style>
   html, body {
     height: 100%;
@@ -33,18 +33,9 @@
     width: calc(var(--w) * 1%);
     height: calc(var(--h) * 1%);
     transform: translate(-50%, -50%);
-    background: transparent;
+    background: rgba(0, 128, 255, 0.35); /* always semi-transparent blue */
+    border: 1px solid #00f;              /* outline for clarity */
     cursor: pointer;
-  }
-
-  /* Hover = semi-transparent blue */
-  .btn:hover {
-    background: rgba(0, 128, 255, 0.35);
-  }
-
-  /* Active/click = semi-transparent red */
-  .btn:active {
-    background: rgba(255, 0, 0, 0.35);
   }
 </style>
 </head>
