@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sedimentary Choices (Debug)</title>
+<title>Sedimentary Choices</title>
 <style>
   html, body {
     height: 100%;
@@ -33,7 +33,7 @@
     width: calc(var(--w) * 1%);
     height: calc(var(--h) * 1%);
     transform: translate(-50%, -50%);
-    background: rgba(0, 128, 255, 0.35); /* debug blue */
+    background: rgba(0, 128, 255, 0.35); /* debug overlay */
     border: 1px solid #00f;
     cursor: pointer;
   }
@@ -43,14 +43,21 @@
   <div class="stage">
     <img src="images/sedimentary_choices.jpg" alt="Sedimentary rock choices" />
 
-    <a href="images/Sandstone.html"          class="btn" style="--x:27;  --y:26;    --w:44; --h:16.5;"></a>
-    <a href="images/Conglomerate.html"       class="btn" style="--x:73;  --y:26;    --w:44; --h:16.5;"></a>
-    <a href="images/TurbiditeSandstone.html" class="btn" style="--x:27;  --y:45;    --w:44; --h:16.5;"></a>
-    <a href="images/Graywacke.html"          class="btn" style="--x:73;  --y:45;    --w:44; --h:16.5;"></a>
-    <a href="images/Breccia.html"            class="btn" style="--x:27;  --y:65.65; --w:44; --h:16.5;"></a>
-    <a href="images/Lahar.html"              class="btn" style="--x:73;  --y:65.65; --w:44; --h:16.5;"></a>
-    <a href="images/BandedIron.html"         class="btn" style="--x:27;  --y:85.35; --w:44; --h:16.5;"></a>
-    <a href="images/Coquina.html"            class="btn" style="--x:73;  --y:83.35; --w:44; --h:16.5;"></a>
+    <!-- Row 1 -->
+    <a href="images/Sandstone.html"          class="btn" style="--x:27;  --y:20; --w:44; --h:16.5;"></a>
+    <a href="images/Conglomerate.html"       class="btn" style="--x:73;  --y:20; --w:44; --h:16.5;"></a>
+
+    <!-- Row 2 -->
+    <a href="images/TurbiditeSandstone.html" class="btn" style="--x:27;  --y:40; --w:44; --h:16.5;"></a>
+    <a href="images/Graywacke.html"          class="btn" style="--x:73;  --y:40; --w:44; --h:16.5;"></a>
+
+    <!-- Row 3 -->
+    <a href="images/Breccia.html"            class="btn" style="--x:27;  --y:60; --w:44; --h:16.5;"></a>
+    <a href="images/Lahar.html"              class="btn" style="--x:73;  --y:60; --w:44; --h:16.5;"></a>
+
+    <!-- Row 4 -->
+    <a href="images/BandedIron.html"         class="btn" style="--x:27;  --y:80; --w:44; --h:16.5;"></a>
+    <a href="images/Coquina.html"            class="btn" style="--x:73;  --y:80; --w:44; --h:16.5;"></a>
   </div>
 </body>
 </html>
