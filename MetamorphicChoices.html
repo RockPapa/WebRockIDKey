@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Metamorphic Choices</title>
+<title>Igneous Choices</title>
 <style>
   html, body {
     height: 100%;
@@ -16,7 +16,7 @@
 
   .stage {
     position: relative;
-    max-width: min(95vw, 95vh * (390/844)); /* keep iPhone 14 aspect ratio */
+    max-width: min(95vw, 95vh * (390/844));
     width: 100%;
   }
 
@@ -28,36 +28,38 @@
 
   .btn {
     position: absolute;
-    left: calc(var(--x) * 100%);
-    top:  calc(var(--y) * 100%);
-    width: calc(var(--w) * 100%);
-    height: calc(var(--h) * 100%);
-    background: rgba(255, 0, 0, 0.3); /* red overlay for debug */
-    border: 1px solid #f00;
+    left: calc(var(--x) * 1%);
+    top:  calc(var(--y) * 1%);
+    width: calc(var(--w) * 1%);
+    height: calc(var(--h) * 1%);
+    transform: translate(-50%, -50%);
+    background: transparent; /* invisible until hover */
     cursor: pointer;
+  }
+
+  /* Hover = semi-transparent blue */
+  .btn:hover {
+    background: rgba(0, 128, 255, 0.35);
+  }
+
+  /* Active/click = semi-transparent red */
+  .btn:active {
+    background: rgba(255, 0, 0, 0.35);
   }
 </style>
 </head>
 <body>
   <div class="stage">
-    <img src="images/metamorphic_choices.jpg" alt="Metamorphic rock choices" />
+    <img src="images/igneous_choices.jpg" alt="Igneous rock choices" />
 
-    <!-- Row 1 -->
-    <a href="images/GraniteGneiss.html"     class="btn" style="--x:0.27; --y:0.26; --w:0.44; --h:0.15;"></a>
-    <a href="images/Metabasalt.html"        class="btn" style="--x:0.73; --y:0.26; --w:0.44; --h:0.15;"></a>
-
-    <!-- Row 2 -->
-    <a href="images/BiotiteGneiss.html"     class="btn" style="--x:0.27; --y:0.45; --w:0.44; --h:0.15;"></a>
-    <a href="images/FelsicMetatuff.html"    class="btn" style="--x:0.73; --y:0.45; --w:0.44; --h:0.15;"></a>
-
-    <!-- Row 3 -->
-    <a href="images/Amphibolite.html"       class="btn" style="--x:0.27; --y:0.64; --w:0.44; --h:0.15;"></a>
-    <a href="images/Schist.html"            class="btn" style="--x:0.73; --y:0.64; --w:0.44; --h:0.15;"></a>
-
-    <!-- Row 4 -->
-    <a href="images/Migmatite.html"         class="btn" style="--x:0.27; --y:0.83; --w:0.44; --h:0.15;"></a>
-    <a href="images/Serpentinite.html"      class="btn" style="--x:0.73; --y:0.83; --w:0.44; --h:0.15;"></a>
+    <a href="images/Granite.html"    class="btn" style="--x:25; --y:21; --w:42; --h:19;"></a>
+    <a href="images/Dacite.html"     class="btn" style="--x:72.5; --y:22; --w:42; --h:19;"></a>
+    <a href="images/Diorite.html"    class="btn" style="--x:25; --y:41; --w:42; --h:18.5;"></a>
+    <a href="images/Andesite.html"   class="btn" style="--x:75; --y:41.5; --w:42; --h:19.5;"></a>
+    <a href="images/Diabase.html"    class="btn" style="--x:25; --y:62; --w:42; --h:22;"></a>
+    <a href="images/Basalt.html"     class="btn" style="--x:70; --y:62; --w:45.5; --h:22;"></a>
+    <a href="images/Gabbro.html"     class="btn" style="--x:25; --y:85; --w:42; --h:22;"></a>
+    <a href="images/Peridotite.html" class="btn" style="--x:70; --y:85; --w:48; --h:22;"></a>
   </div>
 </body>
 </html>
-
