@@ -1,59 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Granite</title>
 <style>
-  body {
+  html, body {
     margin: 0;
-    background: rgba(0,0,0,0.05);
-    font-family: system-ui, sans-serif;
-    overflow-y: scroll;
+    padding: 0;
+    height: 100%;
+    background: black;
   }
-
   .container {
     position: relative;
     width: 100%;
-    max-width: 844px; /* keeps scale similar to iPhone ratio */
-    margin: auto;
-    padding: 10px;
+    height: 100%;
+    overflow-y: auto; /* vertical scroll */
+    display: flex;
+    justify-content: center;
   }
-
-  .container img {
+  .background-img {
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
+    padding: 8px;
+    max-width: 100%; /* default for small screens */
+  }
+  /* On wider screens (MacBook), cap the width */
+  @media (min-width: 1024px) {
+    .background-img {
+      max-width: 820px;   /* about iPad width */
+      margin: 0 auto;
+    }
+    .container {
+      justify-content: center;
+    }
   }
 
-  /* Transparent clickable top-right button */
-  .top-right-btn {
+  .nav-btn {
     position: absolute;
-    top: 8%;
-    right: 10%;
-    width: 60%;
-    height: 18%;
-    background: transparent;
-    border: none;
+    left: 50%;
+    top: 07%;
+    width: 16%;
+    height: 10%;
+    transform: translate(-50%, -50%);
+    /* make visible for testing */
+    background: rgba(255, 0, 0, 0.4);  /* semi-transparent red */
+    border: 2px solid red;             /* outline */
     cursor: pointer;
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+    max-width: 820px; /* match image max-width on big screens */
   }
-
-  .top-right-btn:hover {
-    background: rgba(0, 128, 255, 0.25);
+  .nav-btn:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   }
-
-  .top-right-btn:active {
-    background: rgba(255, 0, 0, 0.35);
+  .back {
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
   }
 </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Scrollable Granite Image -->
-    <img src="images/granite.jpg" alt="Granite">
+  <button class="back" onclick="navigate('metamorphicchoices.html')">‹ Back</button>
 
-    <!-- Transparent top-right button -->
-    <button class="top-right-btn" onclick="location.href='GraniteDes.html'"></button>
+  <div class="container">
+    <img src="images/granite.jpg" alt="Granite" class="background-img">
+
+    <!-- Nav button (now visible) -->
+    <button class="nav-btn" onclick="navigate('GraniteDes.html')"></button>
   </div>
+
+<script>
+  function navigate(page) {
+    window.location.href = page;
+  }
+</script>
 </body>
 </html>
+
