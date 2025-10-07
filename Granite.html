@@ -16,16 +16,53 @@
     align-items: flex-start;
   }
 
+  .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   img {
     width: 100%;
     height: auto;
     display: block;
-    max-width: 640px;  /* ✅ now same width for iPad and Mac */
+    max-width: 600px;   /* ✅ iPad & Mac image width */
     margin: 0 auto;
+  }
+
+  /* --- Plain dark blue button --- */
+  .nav-btn {
+    position: absolute;
+    top: 20%;              /* 20% down from top of image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;      /* same as image width */
+    height: 45px;
+    background-color: #002b80;  /* dark blue */
+    color: white;
+    border: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
   }
 </style>
 </head>
+
 <body>
-  <img src="images/granite.jpg" alt="Granite">
+  <div class="container">
+    <img src="images/granite.jpg" alt="Granite">
+    <button class="nav-btn" onclick="navigate('GraniteDes.html')">Tap for Description</button>
+  </div>
+
+  <script>
+    function navigate(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
