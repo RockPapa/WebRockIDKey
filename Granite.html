@@ -42,7 +42,9 @@
       left: 50%;
       top: 7%;
       transform: translate(-50%, -50%);
-      width: 60%;
+      /* Changed width rule below */
+      width: 90%;           /* default small width (e.g. on phone) */
+      max-width: 820px;     /* never exceed the image max width on desktop */
       height: 45px;
       background: linear-gradient(180deg, #0046ad 0%, #001f5f 100%);
       color: white;
