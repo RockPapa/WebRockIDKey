@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Granite (Debug)</title>
+  <title>Granite</title>
   <style>
     html, body {
       margin: 0;
@@ -11,6 +11,7 @@
       height: 100%;
       background: black;
     }
+
     .container {
       position: relative;
       width: 100%;
@@ -19,32 +20,36 @@
       display: flex;
       justify-content: center;
     }
+
+    /* Base image style */
     .background-img {
       width: 100%;
       height: auto;
       object-fit: contain;
       display: block;
       padding: 8px;
-      max-width: 100%;
-      border: 2px solid lime !important;  /* DEBUG: outline image */
+      max-width: 700px; /* shared iPad+Mac width */
+      margin: 0 auto;
     }
+
+    /* On larger Mac screens, keep same width as iPad */
     @media (min-width: 1024px) {
       .background-img {
-        max-width: 820px;
-        margin: 0 auto;
+        max-width: 700px; /* identical to iPad */
       }
       .container {
         justify-content: center;
       }
     }
 
+    /* Tap for Description button */
     .nav-btn {
       position: absolute;
       left: 50%;
       top: 7%;
       transform: translate(-50%, -50%);
-      width: 90%;           /* relative width */
-      max-width: 820px;     /* cap */
+      width: 100%;
+      max-width: 700px;  /* matches image width */
       height: 45px;
       background: linear-gradient(180deg, #0046ad 0%, #001f5f 100%);
       color: white;
@@ -59,12 +64,13 @@
       cursor: pointer;
       transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
       z-index: 5;
-      border: 2px solid yellow !important;  /* DEBUG: outline button */
     }
+
     .nav-btn:hover {
       transform: translate(-50%, -50%) scale(1.03);
       box-shadow: 0 6px 14px rgba(0,0,0,0.6);
     }
+
     .nav-btn:active {
       transform: translate(-50%, -50%) scale(0.96);
       box-shadow: 0 2px 8px rgba(0,0,0,0.5);
